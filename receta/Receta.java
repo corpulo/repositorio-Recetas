@@ -13,12 +13,12 @@ public class Receta {
     
     private String nombre;
     private String ingredientes;
-    private String preparacion;
+    private String[] preparacion;
     
     public Receta(String nombre){
         this.nombre=nombre;
     }
-    public Receta(String nombre, String ingredientes, String preparacion){
+    public Receta(String nombre, String ingredientes, String[] preparacion){
         this.nombre=nombre;
         this.ingredientes=ingredientes;
         this.preparacion=preparacion;
@@ -55,14 +55,14 @@ public class Receta {
     /**
      * @return the preparacion
      */
-    public String getPreparacion() {
+    public String[] getPreparacion() {
         return preparacion;
     }
 
     /**
      * @param preparacion the preparacion to set
      */
-    public void setPreparacion(String preparacion) {
+    public void setPreparacion(String[] preparacion) {
         this.preparacion = preparacion;
     }
     
