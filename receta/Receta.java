@@ -11,4 +11,6 @@ package receta;
  */
 public class Receta {
     
+    String nombre,ingredientes,preparacion;
+    
 }
