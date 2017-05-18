@@ -10,5 +10,43 @@ package receta;
  * @author Usuario
  */
 public class Ingrediente {
-    String cantidad, nombre;
+    private String cantidad;
+    private String nombre;
+    
+    public Ingrediente(String cantidad, String nombre){
+        this.cantidad=cantidad;
+        this.nombre=nombre;
+    }
+    
+    public Ingrediente(String nombre){
+        this.nombre=nombre;
+    }
+
+    /**
+     * @return the cantidad
+     */
+    public String getCantidad() {
+        return cantidad;
+    }
+
+    /**
+     * @param cantidad the cantidad to set
+     */
+    public void setCantidad(String cantidad) {
+        this.cantidad = cantidad;
+    }
+
+    /**
+     * @return the nombre
+     */
+    public String getNombre() {
+        return nombre;
+    }
+
+    /**
+     * @param nombre the nombre to set
+     */
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
 }
