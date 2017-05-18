@@ -13,4 +13,12 @@ public class Receta {
     
     String nombre,ingredientes,preparacion;
     
+    public Receta(String nombre){
+        this.nombre=nombre;
+    }
+    public Receta(String nombre, String ingredientes, String preparacion){
+        this.nombre=nombre;
+        this.ingredientes=ingredientes;
+        this.preparacion=preparacion;
+    }
 }
