@@ -5,6 +5,8 @@
  */
 package receta;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Usuario
@@ -12,13 +14,13 @@ package receta;
 public class Receta {
     
     private String nombre;
-    private String ingredientes;
+    private ArrayList[] ingredientes;
     private String preparacion;
     
     public Receta(String nombre){
         this.nombre=nombre;
     }
-    public Receta(String nombre, String ingredientes, String preparacion){
+    public Receta(String nombre, ArrayList[] ingredientes, String preparacion){
         this.nombre=nombre;
         this.ingredientes=ingredientes;
         this.preparacion=preparacion;
@@ -41,14 +43,14 @@ public class Receta {
     /**
      * @return the ingredientes
      */
-    public String getIngredientes() {
+    public ArrayList[] getIngredientes() {
         return ingredientes;
     }
 
     /**
      * @param ingredientes the ingredientes to set
      */
-    public void setIngredientes(String ingredientes) {
+    public void setIngredientes(ArrayList[] ingredientes) {
         this.ingredientes = ingredientes;
     }
 
