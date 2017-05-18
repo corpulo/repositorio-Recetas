@@ -11,7 +11,9 @@ package receta;
  */
 public class Receta {
     
-    String nombre,ingredientes,preparacion;
+    private String nombre;
+    private String ingredientes;
+    private String preparacion;
     
     public Receta(String nombre){
         this.nombre=nombre;
@@ -21,4 +23,47 @@ public class Receta {
         this.ingredientes=ingredientes;
         this.preparacion=preparacion;
     }
+
+    /**
+     * @return the nombre
+     */
+    public String getNombre() {
+        return nombre;
+    }
+
+    /**
+     * @param nombre the nombre to set
+     */
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    /**
+     * @return the ingredientes
+     */
+    public String getIngredientes() {
+        return ingredientes;
+    }
+
+    /**
+     * @param ingredientes the ingredientes to set
+     */
+    public void setIngredientes(String ingredientes) {
+        this.ingredientes = ingredientes;
+    }
+
+    /**
+     * @return the preparacion
+     */
+    public String getPreparacion() {
+        return preparacion;
+    }
+
+    /**
+     * @param preparacion the preparacion to set
+     */
+    public void setPreparacion(String preparacion) {
+        this.preparacion = preparacion;
+    }
+    
 }
