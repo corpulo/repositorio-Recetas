@@ -14,16 +14,18 @@ import java.util.ArrayList;
 public class Receta {
     
     private String nombre;
-    private ArrayList[] ingredientes;
+    private ArrayList<Ingrediente> ingredientes;
     private String[] preparacion;
     
-    public Receta(String nombre){
+    public Receta(String nombre,String[] preparacion){
         this.nombre=nombre;
-    }
-    public Receta(String nombre, ArrayList[] ingredientes, String[] preparacion){
-        this.nombre=nombre;
-        this.ingredientes=ingredientes;
+        this.ingredientes= new ArrayList<Ingrediente>();
         this.preparacion=preparacion;
+    }
+    
+    public Receta(String nombre, String[] preparacion, ArrayList<Ingrediente> ingredientes){
+        this(nombre, preparacion);
+        this.ingredientes = new ArrayList<Ingrediente>();
     }
 
     /**
@@ -43,14 +45,14 @@ public class Receta {
     /**
      * @return the ingredientes
      */
-    public ArrayList[] getIngredientes() {
+    public ArrayList<Ingrediente> getIngredientes() {
         return ingredientes;
     }
 
     /**
      * @param ingredientes the ingredientes to set
      */
-    public void setIngredientes(ArrayList[] ingredientes) {
+    public void setIngredientes(ArrayList<Ingrediente> ingredientes) {
         this.ingredientes = ingredientes;
     }
 
@@ -68,4 +70,15 @@ public class Receta {
         this.preparacion = preparacion;
     }
     
+
+    public void addIngredientes(Ingrediente ingrediente){
+        this.ingredientes.add(ingrediente);
+      
+    }
+    
+    public void addPreparacion(String preparacion){
+    
+    }
+    
 }
+
