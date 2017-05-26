@@ -70,15 +70,9 @@ public class Receta {
         this.preparacion = preparacion;
     }
     
-
-    public void addIngredientes(Ingrediente ingrediente){
+       public void addIngredientes(Ingrediente ingrediente){
         this.ingredientes.add(ingrediente);
       
     }
-    
-    public void addPreparacion(String preparacion){
-    
-    }
-    
 }
 
