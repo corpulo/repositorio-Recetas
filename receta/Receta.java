@@ -16,6 +16,8 @@ public class Receta {
     private String nombre;
     private ArrayList<Ingrediente> ingredientes;
     private ArrayList<String> preparacion;
+    private int personas=4;
+    private String autor;
     
     public Receta(String nombre){
         this.nombre = nombre;
@@ -90,6 +92,34 @@ public class Receta {
         
         
         return contenido;
+    }
+
+    /**
+     * @return the personas
+     */
+    public int getPersonas() {
+        return personas;
+    }
+
+    /**
+     * @param personas the personas to set
+     */
+    public void setPersonas(int personas) {
+        this.personas = personas;
+    }
+
+    /**
+     * @return the autor
+     */
+    public String getAutor() {
+        return autor;
+    }
+
+    /**
+     * @param autor the autor to set
+     */
+    public void setAutor(String autor) {
+        this.autor = autor;
     }
 }
 
