@@ -15,18 +15,14 @@ public class Receta {
     
     private String nombre;
     private ArrayList<Ingrediente> ingredientes;
-    private String[] preparacion;
+    private ArrayList<String> preparacion;
     
-    public Receta(String nombre,String[] preparacion){
-        this.nombre=nombre;
-        this.ingredientes= new ArrayList<Ingrediente>();
-        this.preparacion=preparacion;
-    }
-    
-    public Receta(String nombre, String[] preparacion, ArrayList<Ingrediente> ingredientes){
-        this(nombre, preparacion);
+    public Receta(String nombre){
+        this.nombre = nombre;
         this.ingredientes = new ArrayList<Ingrediente>();
+        this.preparacion = new ArrayList<String>();
     }
+    
 
     /**
      * @return the nombre
@@ -59,20 +55,24 @@ public class Receta {
     /**
      * @return the preparacion
      */
-    public String[] getPreparacion() {
+    public ArrayList<String> getPreparacion() {
         return preparacion;
     }
 
     /**
      * @param preparacion the preparacion to set
      */
-    public void setPreparacion(String[] preparacion) {
+    public void setPreparacion(ArrayList<String> preparacion) {
         this.preparacion = preparacion;
     }
     
-       public void addIngredientes(Ingrediente ingrediente){
+    public void addIngredientes(Ingrediente ingrediente){
         this.ingredientes.add(ingrediente);
       
+    }
+       
+    public void addPreparacion(String preparacion){
+        this.preparacion.add(preparacion);
     }
 }
 
