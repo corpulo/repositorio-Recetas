@@ -10,11 +10,13 @@ package receta;
  * @author Usuario
  */
 public class Ingrediente {
-    private String cantidad;
+    private float cantidad;
+    private String unidad;
     private String nombre;
     
-    public Ingrediente(String cantidad, String nombre){
+    public Ingrediente(float cantidad,String unidad, String nombre){
         this.cantidad=cantidad;
+        this.unidad=unidad;
         this.nombre=nombre;
     }
     
@@ -25,14 +27,14 @@ public class Ingrediente {
     /**
      * @return the cantidad
      */
-    public String getCantidad() {
+    public float getCantidad() {
         return cantidad;
     }
 
     /**
      * @param cantidad the cantidad to set
      */
-    public void setCantidad(String cantidad) {
+    public void setCantidad(float cantidad) {
         this.cantidad = cantidad;
     }
 
