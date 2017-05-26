@@ -16,13 +16,14 @@ public class Receta {
     private String nombre;
     private ArrayList<Ingrediente> ingredientes;
     private ArrayList<String> preparacion;
-    private int personas=4;
+    private int personas;
     private String autor;
     
     public Receta(String nombre){
         this.nombre = nombre;
         this.ingredientes = new ArrayList<Ingrediente>();
         this.preparacion = new ArrayList<String>();
+        personas = 4;
     }
     
 
@@ -121,5 +122,19 @@ public class Receta {
     public void setAutor(String autor) {
         this.autor = autor;
     }
+    
+    public Receta recetaPara(int personas){
+        Receta nueva = new Receta(this.nombre);
+        for(Ingrediente i : ingredientes){
+            float cantidad = (i.getCantidad()*personas)/this.personas;
+            nueva.addIngredientes(new Ingrediente(cantidad, i.getUnidad(), i.getNombre()));
+        }
+        for(String paso : preparacion){
+            nueva.addPreparacion(paso);
+        }
+        nueva.setPersonas(personas);
+        return nueva;
+    }
+    
 }
 
