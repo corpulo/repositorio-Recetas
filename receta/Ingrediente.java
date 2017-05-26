@@ -51,4 +51,22 @@ public class Ingrediente {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+
+    /**
+     * @return the unidad
+     */
+    public String getUnidad() {
+        return unidad;
+    }
+
+    /**
+     * @param unidad the unidad to set
+     */
+    public void setUnidad(String unidad) {
+        this.unidad = unidad;
+    }
+    
+    public String toString(){
+        return this.getCantidad()+this.getUnidad()+" de "+this.getNombre();
+    }
 }
