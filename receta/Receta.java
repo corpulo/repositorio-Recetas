@@ -74,5 +74,22 @@ public class Receta {
     public void addPreparacion(String preparacion){
         this.preparacion.add(preparacion);
     }
+    
+    public String toString(){
+        String contenido = "";
+        
+        contenido += "Recetca: "+this.nombre+"\n";
+        contenido += "Ingredientes:\n";
+        for(Ingrediente i : ingredientes){
+            contenido += "\t"+i+"\n";
+        }
+        contenido += "Preparación:\n";
+        for(int paso = 1; paso <= preparacion.size(); paso++){
+            contenido += "\tPaso "+paso+": "+preparacion.get(paso)+"\n";
+        }
+        
+        
+        return contenido;
+    }
 }
 
